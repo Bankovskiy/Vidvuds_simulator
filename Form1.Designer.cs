@@ -35,6 +35,9 @@
             food1 = new PictureBox();
             food2 = new PictureBox();
             food3 = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)hero).BeginInit();
             ((System.ComponentModel.ISupportInitialize)food1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)food2).BeginInit();
@@ -46,7 +49,7 @@
             hero.BackColor = Color.FromArgb(128, 255, 128);
             hero.BackgroundImage = (Image)resources.GetObject("hero.BackgroundImage");
             hero.Image = (Image)resources.GetObject("hero.Image");
-            hero.Location = new Point(473, 376);
+            hero.Location = new Point(498, 422);
             hero.Name = "hero";
             hero.Size = new Size(234, 220);
             hero.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -92,24 +95,62 @@
             food3.TabIndex = 3;
             food3.TabStop = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(322, 28);
+            label1.TabIndex = 4;
+            label1.Text = "WASD to move (like in snake game)";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(12, 37);
+            label2.Name = "label2";
+            label2.Size = new Size(103, 28);
+            label2.TabIndex = 6;
+            label2.Text = "P to pause";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(12, 65);
+            label3.Name = "label3";
+            label3.Size = new Size(226, 28);
+            label3.TabIndex = 7;
+            label3.Text = "+ and - to change speed";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
             ClientSize = new Size(1220, 753);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(food3);
             Controls.Add(food2);
             Controls.Add(food1);
             Controls.Add(hero);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "WASD controller";
+            Text = "vidvudiņa simulātoriņš āboļu pasauliņā";
             KeyDown += Form1_KeyDown;
             ((System.ComponentModel.ISupportInitialize)hero).EndInit();
             ((System.ComponentModel.ISupportInitialize)food1).EndInit();
             ((System.ComponentModel.ISupportInitialize)food2).EndInit();
             ((System.ComponentModel.ISupportInitialize)food3).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -119,5 +160,8 @@
         private PictureBox food1;
         private PictureBox food2;
         private PictureBox food3;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }

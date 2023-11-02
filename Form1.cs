@@ -114,6 +114,5 @@ namespace WASD_controllerWithTimer
                 food3.Visible = false;
             }
         }
-
     }
 }
