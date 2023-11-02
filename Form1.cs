@@ -81,7 +81,7 @@ namespace WASD_controllerWithTimer
             }
             else if (e.KeyCode == Keys.Add || e.KeyCode == Keys.Oemplus) //if "+" is pressed - the speed increases
             {
-                if(timerMain.Interval > 1)
+                if (timerMain.Interval > 1)
                 {
                     timerMain.Interval -= 1;
                 }
@@ -90,6 +90,30 @@ namespace WASD_controllerWithTimer
             {
                 timerMain.Interval += 1;
             }
+
+            CollisionCheck();
         }
+
+        private void food1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CollisionCheck()
+        {
+            if (hero.Bounds.IntersectsWith(food1.Bounds))
+            {
+                food1.Visible = false;
+            }
+            else if (hero.Bounds.IntersectsWith(food2.Bounds))
+            {
+                food2.Visible = false;
+            }
+            else if (hero.Bounds.IntersectsWith(food3.Bounds))
+            {
+                food3.Visible = false;
+            }
+        }
+
     }
 }
